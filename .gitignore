@@ -1,0 +1,10 @@
+Goddard/results_goddard_primal.pickle
+Goddard/results_goddard_primal_dual.pickle
+VanDerPol/results_vanderpol_primal.pickle
+VanDerPol/results_vanderpol_primal_dual.pickle
+Zermelo/results_zermelo_primal.pickle
+Zermelo/results_zermelo_primal_dual.pickle
+Robbins/results_robbins_primal.pickle
+Robbins/results_robbins_primal_dual.pickle
+.idea/*
+_other_files/*
