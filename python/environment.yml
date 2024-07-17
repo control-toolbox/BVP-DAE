@@ -1,0 +1,8 @@
+name: bvp-dae
+channels:
+  - conda-forge
+dependencies:
+  - python            #= 3.*
+  - scipy             #= 1.4.*
+  - matplotlib        #= 3.1.*
+  - numpy

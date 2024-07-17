@@ -1,3 +1,7 @@
+Manifest.toml
+.DS_Store
+.vscode
+
 Goddard/results_goddard_primal.pickle
 Goddard/results_goddard_primal_dual.pickle
 VanDerPol/results_vanderpol_primal.pickle

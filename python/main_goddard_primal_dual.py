@@ -24,7 +24,8 @@ from timeit import default_timer as dtime
 from utils_functions import plot_sequence
 import matplotlib.pyplot as plt
 import pickle
-
+import os                                 # for saving computations
+import json                               # for saving computations
 
 def main_primal_dual():
     cumul_time = 0.
@@ -94,6 +95,14 @@ def main_primal_dual():
     print("Execution time = ", cumul_time)
     print("Number of iterations = ", len(times))
     print("Number of final time steps = ", len(time))
+
+    # save json file
+    data_solution = {'t':time.tolist(), 'xp':xp.tolist(), 'z':z.tolist()}
+    json_object = json.dumps(data_solution, ensure_ascii=False, indent=4)
+    with open("Goddard/results_goddard_primal_dual.json", 'w', encoding='utf-8') as outfile:
+        outfile.write(json_object)
+        outfile.close()
+
     return optimal_solution
 
 
