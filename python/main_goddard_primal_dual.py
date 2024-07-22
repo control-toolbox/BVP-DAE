@@ -30,13 +30,13 @@ import json                               # for saving computations
 def main_primal_dual():
     cumul_time = 0.
     eps = .1
-    alpha = .25
-    tol = 1e-7
+    alpha = .5
+    tol = 1e-11
     ocp = GoddardPrimalDual()
     ocp.set_eps(eps)
     time, xp, z = ocp.initialize()
     initial_solution = dict(time=time, xp=xp, z=z)
-    options = dict(control_odes_error=True, display=1, res_tol=1e-4)
+    options = dict(control_odes_error=True, display=1, res_tol=1e-6)
     bvp_solver = BVPDAE(**options)
     convergence = False
     iter = 0
